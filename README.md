@@ -15,7 +15,7 @@ pip install -r requirements.txt
 Aby powtórzyć eksperymenty:
 1. Upewnij się, że posiadasz plik `cocktail_dataset.json`.
 2. Uruchom skrypt `main.py`, aby przeprowadzić klasteryzację i zapisać wyniki.
-3. Wyniki wizualne można przeglądać w notebooku `notebooks/visualization.ipynb`.
+3. Wyniki wizualne można przeglądać w pliku .pdf w folderze `notebooks/`.
 
 ## Struktura projektu
 - `src/` - Folder z kodem źródłowym:
