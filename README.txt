@@ -25,8 +25,8 @@ Aby powtórzyć eksperymenty:
   - `utils.py` - Moduł pomocniczy z funkcjami wykorzystywanymi w różnych częściach projektu.
   - `main.py` - Główny skrypt uruchamiający cały pipeline od EDA po klasteryzację.
 
-- `notebooks/` - Folder z notebookami Jupyter do wizualizacji:
-  - `visualization.ipynb` - Notebook do prezentacji wyników EDA i klasteryzacji.
+- `notebooks/` - Folder z plikiem Latex do wizualizacji:
+  - `SolvroProjekt.pdf` - Notebook do prezentacji wyników EDA i klasteryzacji.
 
 - `data/` - Folder z danymi wejściowymi:
   - `cocktail_dataset.json` - Plik z danymi wejściowymi do analizy.
