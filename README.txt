@@ -40,4 +40,3 @@ Aby powtórzyć eksperymenty:
 
 ## Uwagi
 - Większość docstringów została napisana przy użyciu ChatGPT.com
-- Cały kod został napisany przez Paweł Pilarek
