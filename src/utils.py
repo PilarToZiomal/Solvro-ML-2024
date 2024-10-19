@@ -1,25 +1,14 @@
-import pandas as pd
+# src/utils.py
 
+import logging
+import sys
 
-def load_data(path):
-    """
-    Funkcja wczytująca dane z pliku JSON.
-
-    Argumenty:
-    path (str): Ścieżka do pliku JSON z danymi.
-
-    Zwraca:
-    DataFrame: DataFrame z wczytanymi danymi.
-    """
-    return pd.read_json(path)
-
-
-def save_data(df, path):
-    """
-    Funkcja zapisująca dane do pliku CSV.
-
-    Argumenty:
-    df (DataFrame): DataFrame do zapisania.
-    path (str): Ścieżka do pliku CSV, do którego dane zostaną zapisane.
-    """
-    df.to_csv(path, index=False)
+def setup_logging():
+    """Ustawia konfigurację logowania."""
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.StreamHandler(sys.stdout)
+        ]
+    )
