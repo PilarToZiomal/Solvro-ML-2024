@@ -1,3 +1,4 @@
+# Nie czytaj tego, nie odzwierciedla kodu xD
 # Analiza i Klasteryzacja Danych Cocktaili
 
 ## Opis
