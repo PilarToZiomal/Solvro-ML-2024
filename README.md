@@ -1,43 +1,64 @@
-# Nie czytaj tego, nie odzwierciedla kodu xD
-# Analiza i Klasteryzacja Danych Cocktaili
+# Cocktail Clustering Project
 
-## Opis
-Projekt dotyczy eksploracyjnej analizy danych (EDA) oraz klasteryzacji drinków. 
-Dane pochodzą z pliku `cocktail_dataset.json`, a analiza i klasteryzacja wykonane zostały w Pythonie z użyciem bibliotek takich jak `pandas`, `scikit-learn`, `matplotlib`, `seaborn`.
+## Opis projektu
 
-## Instalacja
-Aby uruchomić projekt, należy zainstalować wymagane biblioteki:
+Ten projekt ma na celu analizę i klasteryzację koktajli przy użyciu algorytmów uczenia maszynowego, takich jak K-means, oraz wizualizację wyników za pomocą technik redukcji wymiarów (PCA i UMAP). Projekt zawiera również przetwarzanie danych, eksploracyjną analizę danych (EDA) oraz generowanie różnorodnych wykresów i metryk jakości klasteryzacji.
 
-```sh
+## Struktura katalogów
+
+- **data/** - Zawiera zestaw danych `cocktail_dataset.json` z danymi o koktajlach.
+- **notebooks/** - Zawiera notebooki Jupyter z analizą kroków.
+- **outputs/** - Zawiera pliki wyjściowe generowane przez skrypty, takie jak wykresy, CSV, raporty EDA.
+- **src/** - Zawiera pliki źródłowe Pythona do przetwarzania, analizy i klasteryzacji danych:
+  - `preproc.py` - Przetwarzanie danych wejściowych.
+  - `eda.py` - Eksploracyjna analiza danych (EDA).
+  - `clustering.py` - Klasteryzacja danych za pomocą K-means i wizualizacja wyników.
+  - `config.py` - Konfiguracja projektu, zawiera ścieżki do plików danych i wyjściowych.
+  - `utils.py` - Dodatkowe funkcje pomocnicze, np. do ustawienia logowania.
+
+## Instrukcja uruchamiania projektu - Cocktail Clustering Project
+
+## 1. Instalacja zależności
+
+Przed uruchomieniem projektu należy zainstalować wymagane biblioteki. Możesz to zrobić, tworząc wirtualne środowisko i instalując zależności z pliku `requirements.txt`.
+
+### a. Stwórz i aktywuj wirtualne środowisko (opcjonalnie)
+
+Dla lepszej organizacji zależności zaleca się stworzenie wirtualnego środowiska.
+
+#### W systemie Linux/MacOS:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+#### W systemie Windows:
+```bash
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+### b. Zainstaluj zależności
+
+Po aktywowaniu wirtualnego środowiska, zainstaluj wymagane biblioteki:
+
+```bash
 pip install -r requirements.txt
 ```
 
-## Uruchomienie
-Aby powtórzyć eksperymenty:
-1. Upewnij się, że posiadasz plik `cocktail_dataset.json`.
-2. Uruchom skrypt `main.py`, aby przeprowadzić klasteryzację i zapisać wyniki.
-3. Wyniki wizualne można przeglądać w pliku .pdf w folderze `notebooks/`.
+## 2. Uruchomienie projektu
 
-## Struktura projektu
-- `src/` - Folder z kodem źródłowym:
-  - `eda.py` - Moduł do eksploracyjnej analizy danych.
-  - `preprocessing.py` - Moduł do przetwarzania danych, zawiera kod do czyszczenia i przygotowywania danych.
-  - `clustering.py` - Moduł do klasteryzacji danych, np. KMeans.
-  - `utils.py` - Moduł pomocniczy z funkcjami wykorzystywanymi w różnych częściach projektu.
-  - `main.py` - Główny skrypt uruchamiający cały pipeline od EDA po klasteryzację.
+Projekt można uruchomić za pomocą pliku `main.py`, który automatycznie przetworzy dane, przeprowadzi analizę EDA oraz wykona klasteryzację.
 
-- `notebooks/` - Folder z plikiem Latex do wizualizacji:
-  - `SolvroProjekt.pdf` - Notebook do prezentacji wyników EDA i klasteryzacji.
+## Komenda uruchamiająca główny skrypt:
 
-- `data/` - Folder z danymi wejściowymi:
-  - `cocktail_dataset.json` - Plik z danymi wejściowymi do analizy.
+```bash
+python main.py
+```
 
-- `outputs/` - Folder z wynikami:
-  - `clustered_cocktails.csv` - Plik CSV z wynikami klasteryzacji.
+## 3. Uwagi
 
-- `requirements.txt` - Plik z listą zależności potrzebnych do uruchomienia projektu.
+- Notebooki Jupyter nie zapisują żadnych plików, służą jedynie do eksploracji danych i analizy.
+- W folderze `outputs` znajdują się już przetworzone dane. Możesz je usunąć, aby wygenerować nowe wyniki, uruchamiając ponownie skrypt `main.py`.
+- Upewnij się, że wszystkie wymagane pliki znajdują się w odpowiednich folderach, jak pokazano w strukturze projektu.
+- Po zakończeniu analizy i klasteryzacji wyniki zostaną zapisane automatycznie w folderze `outputs`.
 
-- `README.md` - Instrukcja uruchomienia projektu.
-
-## Uwagi
-- Większość docstringów została napisana przy użyciu ChatGPT.com
